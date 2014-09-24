@@ -1,0 +1,29 @@
+{
+    "name": "studioignis/evt",
+    "description": "Easily implement domain events in your project",
+    "require": {
+        "illuminate/support": "~4.1",
+        "illuminate/events": "~4.1"
+    },
+    "require-dev": {
+        "illuminate/container": "~4.1",
+        "phpspec/phpspec": "~2.1@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "StudioIgnis\\Evt\\": "src"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luciano Longo",
+            "email": "luciano.longo@studioignis.net"
+        }
+    ],
+    "config": {
+        "preferred-install": "dist",
+        "bin-dir": "bin"
+    },
+    "minimum-stability": "dev"
+}

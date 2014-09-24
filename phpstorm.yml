@@ -1,0 +1,5 @@
+suites:
+  studioignis_evt_suite:
+    namespace: StudioIgnis\Evt
+    psr4_prefix: StudioIgnis\Evt
+formatter.name: pretty
