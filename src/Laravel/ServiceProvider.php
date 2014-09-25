@@ -38,7 +38,7 @@ class ServiceProvider extends IlluminateServiceProvider
         {
             return $app->make(
                 $app['config']['evt::listener'],
-                [$app['config']['evt::listeners_namespace']]
+                [$app, $app['config']['evt::listeners_namespace']]
             );
         });
     }
@@ -55,6 +55,6 @@ class ServiceProvider extends IlluminateServiceProvider
     {
         /** @var Dispatcher $dispatcher */
         $dispatcher = $this->app['events'];
-        $dispatcher->listen($this->app['config']['listen_for'], 'StudioIgnis\Evt\EventListener');
+        $dispatcher->listen($this->app['config']['evt::listen_for'], 'StudioIgnis\Evt\EventListener');
     }
 }
