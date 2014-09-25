@@ -8,6 +8,8 @@ class ServiceProvider extends IlluminateServiceProvider
     public function boot()
     {
         $this->package('studioignis/evt', 'evt', __DIR__.'/../../');
+
+        $this->initGlobalListener();
     }
 
     /**
@@ -20,7 +22,6 @@ class ServiceProvider extends IlluminateServiceProvider
         $this->bindDispatcher();
         $this->bindListener();
         $this->bindInflector();
-        $this->initGlobalListener();
     }
 
     protected function bindDispatcher()
