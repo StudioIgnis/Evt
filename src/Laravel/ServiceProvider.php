@@ -5,6 +5,10 @@ use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 
 class ServiceProvider extends IlluminateServiceProvider
 {
+    public function boot()
+    {
+        $this->package('studioignis/evt', 'evt', __DIR__.'/../../');
+    }
 
     /**
      * Register the service provider.
@@ -13,8 +17,6 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     public function register()
     {
-        $this->package('studioignis/evt', 'evt', __DIR__.'/../../');
-
         $this->bindDispatcher();
         $this->bindListener();
         $this->bindInflector();
