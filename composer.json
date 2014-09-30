@@ -2,8 +2,7 @@
     "name": "studioignis/evt",
     "description": "Easily implement domain events in your project",
     "require": {
-        "illuminate/support": "~4.1",
-        "illuminate/events": "~4.1"
+        "illuminate/support": "~4.1"
     },
     "require-dev": {
         "illuminate/container": "~4.1",
