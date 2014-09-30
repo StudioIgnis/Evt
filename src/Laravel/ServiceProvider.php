@@ -1,6 +1,5 @@
 <?php namespace StudioIgnis\Evt\Laravel; 
 
-use Illuminate\Events\Dispatcher;
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 
 class ServiceProvider extends IlluminateServiceProvider
