@@ -17,6 +17,11 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     public function register()
     {
+        $this->app->bindShared('StudioIgnis\Evt\Support\Container', function ($app)
+        {
+            return new Container($app);
+        });
+
         $this->app->bindShared('StudioIgnis\Evt\Dispatcher', function ($app)
         {
             return $app->make($app['config']['evt::dispatcher']);
