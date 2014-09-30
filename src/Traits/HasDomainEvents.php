@@ -1,6 +1,6 @@
 <?php namespace StudioIgnis\Evt\Traits;
 
-trait EventGenerator
+trait HasDomainEvents
 {
     /**
      * @var array

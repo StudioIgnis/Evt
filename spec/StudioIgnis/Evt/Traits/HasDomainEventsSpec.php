@@ -4,9 +4,9 @@ namespace spec\StudioIgnis\Evt\Traits;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
-use StudioIgnis\Evt\Traits\EventGenerator;
+use StudioIgnis\Evt\Traits\HasDomainEvents;
 
-class EventGeneratorSpec extends ObjectBehavior
+class HasDomainEventsSpec extends ObjectBehavior
 {
     function let()
     {
@@ -25,7 +25,7 @@ class EventGeneratorSpec extends ObjectBehavior
 
 class DummyEntity
 {
-    use EventGenerator;
+    use HasDomainEvents;
 }
 
 class DummyEvent {}
