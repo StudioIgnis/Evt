@@ -1,5 +1,7 @@
 <?php namespace StudioIgnis\Evt\Traits;
 
+use StudioIgnis\Evt\Event;
+
 trait HasDomainEvents
 {
     /**
@@ -10,9 +12,9 @@ trait HasDomainEvents
     /**
      * Raise a new event
      *
-     * @param $event
+     * @param Event $event
      */
-    public function raise($event)
+    public function raise(Event $event)
     {
         $this->pendingEvents[] = $event;
     }

@@ -4,6 +4,7 @@ namespace spec\StudioIgnis\Evt\Traits;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
+use StudioIgnis\Evt\Event;
 use StudioIgnis\Evt\Traits\HasDomainEvents;
 
 class HasDomainEventsSpec extends ObjectBehavior
@@ -13,13 +14,11 @@ class HasDomainEventsSpec extends ObjectBehavior
         $this->beAnInstanceOf('spec\StudioIgnis\Evt\Traits\DummyEntity');
     }
 
-    function it_raises_and_releases_events()
+    function it_raises_and_releases_events(Event $event)
     {
-        $dummyEvent = new DummyEvent;
+        $this->raise($event);
 
-        $this->raise($dummyEvent);
-
-        $this->releaseEvents()->shouldReturn([$dummyEvent]);
+        $this->releaseEvents()->shouldReturn([$event]);
     }
 }
 
@@ -27,5 +26,3 @@ class DummyEntity
 {
     use HasDomainEvents;
 }
-
-class DummyEvent {}
