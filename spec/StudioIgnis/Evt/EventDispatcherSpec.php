@@ -27,7 +27,7 @@ class EventDispatcherSpec extends ObjectBehavior
     {
         $this->addListener('foo', $listener);
 
-        $event->getName()->willReturn('foo')->shouldBeCalled();
+        $event->getEventName()->willReturn('foo')->shouldBeCalled();
 
         $this->dispatch([$event]);
     }
@@ -44,7 +44,7 @@ class EventDispatcherSpec extends ObjectBehavior
         // Stub & mock container
         $container->resolve($listenerName)->willReturn(new FooEventListener)->shouldBeCalled();
         // Stub event
-        $event->getName()->willReturn('foo');
+        $event->getEventName()->willReturn('foo');
 
         // Listeners are instantiated on dispatch
         $this->dispatch([$event]);

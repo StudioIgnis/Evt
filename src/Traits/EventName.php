@@ -15,7 +15,7 @@ trait EventName
      * @return string
      * @see \StudioIgnis\Evt\Event
      */
-    public function getName()
+    public function getEventName()
     {
         return (new \ReflectionClass(static::class))->getShortName();
     }

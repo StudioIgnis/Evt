@@ -63,8 +63,8 @@ class EventDispatcher implements Dispatcher
      */
     private function getListenersFor(Event $event)
     {
-        return isset($this->listeners[$event->getName()])
-            ? $this->listeners[$event->getName()]
+        return isset($this->listeners[$event->getEventName()])
+            ? $this->listeners[$event->getEventName()]
             : [];
     }
 

@@ -2,5 +2,5 @@
 
 interface Event
 {
-    public function getName();
+    public function getEventName();
 }
