@@ -1,3 +1,4 @@
+[![Build Status](http://img.shields.io/travis/StudioIgnis/Evt.svg?style=flat-square)](https://travis-ci.org/StudioIgnis/Evt)
 [![Packagist Version](http://img.shields.io/packagist/v/studioignis/evt.svg?style=flat-square)](https://packagist.org/packages/studioignis/evt)
 [![Packagist Downloads](http://img.shields.io/packagist/dt/studioignis/evt.svg?style=flat-square)](https://packagist.org/packages/studioignis/evt)
 ![Packagist License](http://img.shields.io/packagist/l/studioignis/evt.svg?style=flat-square)
