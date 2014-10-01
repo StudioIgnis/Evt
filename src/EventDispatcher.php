@@ -14,7 +14,7 @@ class EventDispatcher implements Dispatcher
      */
     private $listeners = [];
 
-    public function __construct(Container $container)
+    public function __construct(Container $container = null)
     {
         $this->container = $container;
     }
@@ -76,6 +76,10 @@ class EventDispatcher implements Dispatcher
     {
         if (is_string($listener))
         {
+            if (!$this->container) {
+                throw new \InvalidArgumentException('The listener is a string, but no container was provided.');
+            }
+
             $listener = $this->container->resolve($listener);
         }
 
