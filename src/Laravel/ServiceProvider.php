@@ -6,7 +6,7 @@ class ServiceProvider extends IlluminateServiceProvider
 {
     public function boot()
     {
-        $this->package('studioignis/evt', 'evt');
+        $this->package('studioignis/evt', 'evt', realpath(__DIR__.'/../../'));
     }
 
     /**
