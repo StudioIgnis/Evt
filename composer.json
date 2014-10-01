@@ -2,6 +2,7 @@
     "name": "studioignis/evt",
     "description": "Easily implement domain events in your project",
     "require": {
+        "php": ">=5.4",
         "illuminate/support": "~4.1"
     },
     "require-dev": {
