@@ -3,7 +3,7 @@
 return [
     /**
      * Which concrete dispatcher implementation to map to
-     * StudioIgnis\Evt\EventDispatcher contract.
+     * StudioIgnis\Evt\Dispatcher contract.
      */
     'dispatcher' => 'StudioIgnis\Evt\EventDispatcher',
 ];
