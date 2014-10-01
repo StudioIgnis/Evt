@@ -1,4 +1,4 @@
-<?php namespace StudioIgnis\Evt\Laravel; 
+<?php namespace StudioIgnis\Evt\Laravel;
 
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 
@@ -23,9 +23,7 @@ class ServiceProvider extends IlluminateServiceProvider
 
         $this->app->bindShared('StudioIgnis\Evt\Dispatcher', function ($app)
         {
-            return $app->make($app['config']['evt::dispatcher'], [
-                $app['StudioIgnis\Evt\Support\Container']
-            ]);
+            return $app->make($app['config']['evt::dispatcher']);
         });
     }
 }
