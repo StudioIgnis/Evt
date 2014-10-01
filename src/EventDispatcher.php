@@ -85,7 +85,7 @@ class EventDispatcher implements Dispatcher
 
         if (!$listener instanceof EventListener)
         {
-            throw new \DomainException(sprintf(
+            throw new \InvalidArgumentException(sprintf(
                 'Event listener [%s] should be an instance of [%s]',
                 get_class($listener), '\StudioIgnis\Evt\EventListener'
             ));
