@@ -198,7 +198,9 @@ $dispatcher->dispatch($user->releaseEvents());
 A service provider for the Laravel framework is included in this package.
 You'll need to add it to your `config/app.php` file:
 
-'\StudioIgnis\Evt\Laravel\ServiceProvider'
+```php
+'StudioIgnis\Evt\Laravel\ServiceProvider'
+```
 
 This way, you can inject it as a dependency and will be automatically resolved
 out of the IoC container:
