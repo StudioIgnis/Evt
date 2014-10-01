@@ -184,10 +184,11 @@ class User implements EventListener
         $this->raise(new Events\UserWasRegistered($name, $email));
     }
 }
+```
+Now (maybe inside a [command handler](https://github.com/studioignis/cmd) class)
+you can do this:
 
-// Now (maybe inside a [command handler](https://github.com/studioignis/cmd)
-class) you can do this:
-
+```php
 $dispatcher->dispatch($user->releaseEvents());
 ```
 
